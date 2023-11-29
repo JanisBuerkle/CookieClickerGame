@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Update="MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Window\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="WPF-UI-Enhanced" Version="10.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Cookie.png" />
+      <None Remove="PerfectCookie.png" />
+      <None Remove="PerfectCookie.webp" />
+      <None Remove="Assets\cookie.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Assets\cookie.png" />
+    </ItemGroup>
+
+</Project>
