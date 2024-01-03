@@ -5,16 +5,31 @@ namespace RPG;
 
 public class MainWindowViewModel : ViewModelBase
 {
-    private string _content;
+    private string _cookieContent;
 
-    public string Content
+    public string CookieContent
     {
-        get => _content;
+        get => _cookieContent;
         set
         {
-            if (_content != value)
+            if (_cookieContent != value)
             {
-                _content = value;
+                _cookieContent = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+    
+    private string _perClickContent;
+
+    public string PerClickContent
+    {
+        get => _perClickContent;
+        set
+        {
+            if (_perClickContent != value)
+            {
+                _perClickContent = value;
                 OnPropertyChanged();
             }
         }
@@ -95,7 +110,8 @@ public class MainWindowViewModel : ViewModelBase
 
     private void ContentRefresh()
     {
-        Content = $"Cookies: {Cookies:F1}";
+        CookieContent = $"Cookies: {Cookies:F1}";
+        PerClickContent = $"Pro Click: {Multiplikator:F1}";
     }
 
     private void CountMethod()

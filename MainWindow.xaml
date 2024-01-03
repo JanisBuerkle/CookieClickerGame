@@ -72,14 +72,18 @@
                 </Button>
             </StackPanel>
 
-            <StackPanel VerticalAlignment="Top" Margin="40,30,0,0" Grid.Row="0" Grid.Column="3"
-                        Orientation="Vertical">
+            <StackPanel  VerticalAlignment="Top" Margin="40,30,0,0" Grid.Row="0" Grid.Column="3"
+                         Orientation="Vertical">
 
-                <Label FontSize="40"
-                       Content="{Binding Content}">
+                <Label FontSize="34"
+                       Content="{Binding PerClickContent}">
+                </Label>
+                
+                <Label FontSize="34"
+                       Content="{Binding CookieContent}">
                 </Label>
 
-                <Button Width="200" Height="200"
+                <Button Width="180" Height="180"
                         BorderThickness="0" Command="{Binding Count}">
                     <Button.Background>
                         <ImageBrush ImageSource="pack://application:,,,/Assets/cookie.png" Stretch="Fill" />
