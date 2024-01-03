@@ -8,19 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b13ab8e6-f826-44e8-b462-923baeeefe18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/cookie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cookie.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MainWindow.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MainWindow.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MainWindowViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RPG.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ViewModelBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +21,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -98,13 +87,23 @@
       <workItem from="1700826319610" duration="2726000" />
       <workItem from="1700830018543" duration="2367000" />
       <workItem from="1700832430753" duration="664000" />
-      <workItem from="1701247383678" duration="6251000" />
+      <workItem from="1701247383678" duration="6792000" />
     </task>
+    <task id="LOCAL-00001" summary="29.11.2023 | 11:43">
+      <option name="closed" value="true" />
+      <created>1701254597558</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701254597558</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -118,24 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MainWindow.xaml.cs</url>
-          <line>45</line>
-          <properties documentPath="C:\Users\bks\RiderProjects\RPG\MainWindow.xaml.cs" initialLine="61" containingFunctionPresentation="Method 'Times01'">
-            <startOffsets>
-              <option value="1416" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1438" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="29.11.2023 | 11:43" />
+    <option name="LAST_COMMIT_MESSAGE" value="29.11.2023 | 11:43" />
   </component>
 </project>
