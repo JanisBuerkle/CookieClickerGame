@@ -14,10 +14,11 @@ namespace RPG
             get => (MainWindowViewModel)GetValue(ViewModelProperty);
             set => SetValue(ViewModelProperty, value);
         }
-
+        
         public MainWindow()
-        {
-            ViewModel = new MainWindowViewModel();
+        {  
+            
+            ViewModel = new MainWindowViewModel(new GameData(), "", "");
             InitializeComponent();
         }
 
