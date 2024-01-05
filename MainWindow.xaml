@@ -41,137 +41,137 @@
                     <StackPanel>
                             <Label Content="AFK Money"/>
                             <Label Content="Buy to update the amount to the same as you get per click."/>
-                            <Label Content="{Binding AfkBuyPrice}"/>
+                            <Label Content="{Binding AFKMoneyContent}"/>
                     </StackPanel>
             </Button>
 
             <StackPanel Grid.Row="0" Grid.Column="0" Margin="10,10,0,0">
-                <Button Content="*0.1 | 10" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+0.1 | 10" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="10" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*0.5 | 50" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+0.5 | 50" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="50" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*1 | 100" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+1 | 100" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="100" Margin="0,0,0,5">
                 </Button>
                     
-                <Button Content="*2 | 200" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+2 | 200" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="200" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*5 | 500" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+5 | 500" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="500" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*10 | 1.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+10 | 1.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="1000" Margin="0,0,0,5">
                 </Button>
             </StackPanel>
 
             
             <StackPanel Grid.Row="0" Grid.Column="1" Margin="10,10,0,0">
-                <Button Content="*20 | 2.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+20 | 2.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="2000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*50| 5.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+50 | 5.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="5000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*100| 10.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+100 | 10.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="10000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*200 | 20.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+200 | 20.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="20000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*500| 50.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+500 | 50.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="50000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*1000| 100.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+1000 | 100.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="100000" Margin="0,0,0,5">
                 </Button>
             </StackPanel>
 
             <StackPanel Grid.Row="0" Grid.Column="2" Margin="10,10,0,0">
-                <Button Content="*2000 | 200.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+2000 | 200.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="200000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*5000| 500.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+5000 | 500.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="500000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*10000| 1.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+10000 | 1.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="1000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*20000 | 2.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+20000 | 2.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="2000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*50000| 5.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+50000 | 5.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="5000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*100000| 10.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+100000 | 10.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="10000000" Margin="0,0,0,5">
                 </Button>
             </StackPanel>
 
             <StackPanel Grid.Row="0" Grid.Column="3" Margin="10,10,0,0">
-                <Button Content="*200000 | 20.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+200000 | 20.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="20000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*500000| 50.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+500000 | 50.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="50000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*1000000| 100.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+1000000 | 100.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="100000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*2000000 | 200.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+2000000 | 200.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="200000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*5000000| 500.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+5000000 | 500.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="500000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*10000000| 1.000.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+10000000 | 1.000.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="1000000000" Margin="0,0,0,5">
                 </Button>
             </StackPanel>
 
             <StackPanel Grid.Row="0" Grid.Column="4" Margin="10,10,0,0">
-                <Button Content="*200000000 | 2.000.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+20000000 | 2.000.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="2000000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*500000000| 5.000.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+50000000 | 5.000.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="5000000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*1000000000| 10.000.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+100000000 | 10.000.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="10000000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*2000000000 | 20.000.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+200000000 | 20.000.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="20000000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*5000000000| 50.000.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+500000000 | 50.000.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="50000000000" Margin="0,0,0,5">
                 </Button>
 
-                <Button Content="*10000000000| 10.000.000.000" Width="170" Height="100" Command="{Binding Times}"
+                <Button Content="+1000000000 | 100.000.000.000" Width="220" Height="100" Command="{Binding Times}"
                         CommandParameter="100000000000" Margin="0,0,0,5">
                 </Button>
             </StackPanel>

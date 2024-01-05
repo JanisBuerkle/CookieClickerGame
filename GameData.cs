@@ -1,8 +1,23 @@
 ﻿using System;
+using RPG;
 
 [Serializable]
-public class GameData
+public class GameData : ViewModelBase
 {
+    private int _afkBuyPrice;
+
+    public int AfkBuyPrice
+    {
+        get => _afkBuyPrice;
+        set
+        {
+            if (_afkBuyPrice != value)
+            {
+                _afkBuyPrice = value;
+                OnPropertyChanged();
+            }
+        }
+    }
     public double Cookies { get; set; }
     
     private double _multiplikator;

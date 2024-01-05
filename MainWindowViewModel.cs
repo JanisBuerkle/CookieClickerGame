@@ -26,26 +26,38 @@ namespace RPG
             AFKCookieCommand = new RelayCommand(AfkCookieCommandMethod);
         }
 
-        public bool Test { get; set; }
         private void AfkCookieCommandMethod()
         {
-            AfkCookie = GameData.Multiplikator;
-            if (!Test)
+            if (GameData.AfkBuyPrice <= GameData.Cookies)
             {
+                if (GameData.Multiplikator != AfkCookie)
+                {
+                    GameData.AfkBuyPrice *= 3;
+                    Console.WriteLine("Preis erhöht.");
+                }
+
+                AfkCookie = GameData.Multiplikator;
+                Console.WriteLine("AfkCookie Anzahl geupdated.");
+                if (timer != null)
+                {
+                    timer.Enabled = false;
+                    timer.Elapsed -= OnTimedEvent;
+                    timer.Dispose();
+                    Console.WriteLine("Timer gestoppt.");
+                }
+
                 timer = new Timer(1000);
                 timer.Elapsed += OnTimedEvent;
                 timer.AutoReset = true;
                 timer.Enabled = true;
-                Test = true;
+                Console.WriteLine("Timer gestartet.");
             }
-            
-            if (GameData.Multiplikator != AfkCookie)
+            else
             {
-                AfkBuyPrice *= 11;
-                Test = false;
+                InfoVisible = true;
+                ContentRefresh();
+                Console.WriteLine("Nicht genug Cookies.");
             }
-
-            
         }
 
         private void OnProcessExit(object sender, EventArgs e)
@@ -59,14 +71,13 @@ namespace RPG
             {
                 GameData.Multiplikator += 0.1;
                 AfkCookie = 0;
-                AfkBuyPrice = 1;
+                GameData.AfkBuyPrice = 1;
             }
         }
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
             GameData.Cookies += AfkCookie;
-            Console.Write("Test");
             ContentRefresh();
         }
 
@@ -78,12 +89,14 @@ namespace RPG
                 GameData.Cookies -= price;
                 switch (zahl)
                 {
+                    // Zehn
                     case "10":
                         GameData.Multiplikator += 0.1;
                         break;
                     case "50":
                         GameData.Multiplikator += 0.5;
                         break;
+                    //Hundert
                     case "100":
                         GameData.Multiplikator += 1;
                         break;
@@ -93,6 +106,7 @@ namespace RPG
                     case "500":
                         GameData.Multiplikator += 5;
                         break;
+                    //Tausend
                     case "1000":
                         GameData.Multiplikator += 10;
                         break;
@@ -102,6 +116,7 @@ namespace RPG
                     case "5000":
                         GameData.Multiplikator += 50;
                         break;
+                    //Zehntausend
                     case "10000":
                         GameData.Multiplikator += 100;
                         break;
@@ -111,6 +126,7 @@ namespace RPG
                     case "50000":
                         GameData.Multiplikator += 500;
                         break;
+                    //Hunderttausend
                     case "100000":
                         GameData.Multiplikator += 1000;
                         break;
@@ -120,17 +136,19 @@ namespace RPG
                     case "500000":
                         GameData.Multiplikator += 5000;
                         break;
+                    //Millionen
                     case "1000000":
                         GameData.Multiplikator += 10000;
                         break;
                     case "2000000":
                         GameData.Multiplikator += 20000;
                         break;
-                    case "10000000":
-                        GameData.Multiplikator += 100000;
-                        break;
                     case "5000000":
                         GameData.Multiplikator += 50000;
+                        break;
+                    //Zehnmillionen
+                    case "10000000":
+                        GameData.Multiplikator += 100000;
                         break;
                     case "20000000":
                         GameData.Multiplikator += 200000;
@@ -138,6 +156,7 @@ namespace RPG
                     case "50000000":
                         GameData.Multiplikator += 500000;
                         break;
+                    //Hundertmillionen
                     case "100000000":
                         GameData.Multiplikator += 1000000;
                         break;
@@ -147,27 +166,27 @@ namespace RPG
                     case "500000000":
                         GameData.Multiplikator += 5000000;
                         break;
+                    //Milliarden
                     case "1000000000":
                         GameData.Multiplikator += 10000000;
                         break;
-
                     case "2000000000":
-                        GameData.Multiplikator += 200000000;
+                        GameData.Multiplikator += 20000000;
                         break;
                     case "5000000000":
-                        GameData.Multiplikator += 500000000;
+                        GameData.Multiplikator += 50000000;
                         break;
                     case "10000000000":
-                        GameData.Multiplikator += 1000000000;
+                        GameData.Multiplikator += 100000000;
                         break;
                     case "20000000000":
-                        GameData.Multiplikator += 2000000000;
+                        GameData.Multiplikator += 200000000;
                         break;
                     case "50000000000":
-                        GameData.Multiplikator += 5000000000;
+                        GameData.Multiplikator += 500000000;
                         break;
                     case "100000000000":
-                        GameData.Multiplikator += 10000000000;
+                        GameData.Multiplikator += 1000000000;
                         break;
                 }
 
@@ -212,36 +231,20 @@ namespace RPG
             }
         }
 
-
-        private int _afkBuyPrice;
-
-        public int AfkBuyPrice
-        {
-            get => _afkBuyPrice;
-            set
-            {
-                if (_afkBuyPrice != value)
-                {
-                    _afkBuyPrice = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
         public RelayCommand<object> Times { get; }
         public RelayCommand Count { get; }
         public RelayCommand AFKCookieCommand { get; }
 
-        private string _afkMoney;
+        private string _afkMoneyContent;
 
-        public string AFKMoney
+        public string AFKMoneyContent
         {
-            get => _afkMoney;
+            get => _afkMoneyContent;
             set
             {
-                if (_afkMoney != value)
+                if (_afkMoneyContent != value)
                 {
-                    _afkMoney = value;
+                    _afkMoneyContent = value;
                     OnPropertyChanged();
                 }
             }
@@ -298,7 +301,7 @@ namespace RPG
             formattedString = formattedString.Replace(",", ".");
             CookieContent = $"Cookies: {formattedString}";
             PerClickContent = $"Pro Click: {GameData.Multiplikator:F1}";
-            AFKMoney = $"AFK - {AfkCookie} Cookies/s | 10 Cookies";
+            AFKMoneyContent = GameData.AfkBuyPrice.ToString() + " Cookies";
         }
     }
 }
